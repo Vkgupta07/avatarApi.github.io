@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>create Project using API in website</title>
+  </head>
+  <body>
+    <section class="title">
+      <h1>What does your name say about your personality</h1>
+
+      <div class="container">
+        <div class="name">
+          <label for="">Enter your name</label>
+          <input type="text" name="" id="nameid" />
+        </div>
+        <div class="image">
+          <img src="./img1.jpeg" alt="" id="imgChange" width="200" height="200" />
+        </div>
+        <button id="btn">Click Me</button>
+      </div>
+    </section>
+    
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          let valueInput = $("#nameid").val();
+        //   alert(valueInput);
+          $("#imgChange").attr("src", ` https://robohash.org/${valueInput}`);
+         
+        });
+      });
+    </script>
+    
+  </body>
+</html>
